@@ -25,10 +25,6 @@ class RepositoryListActivity : AppCompatActivity() {
             setProfileData(it)
         }
         setupRecyclerView(repositories)
-
-    }
-
-    private fun setupRecyclerView(repositories: ArrayList<Repo>?) {
         viewManager = GridLayoutManager(this, 2)
         viewAdapter = GHRepositoryAdapter(repositories)
 
@@ -36,6 +32,17 @@ class RepositoryListActivity : AppCompatActivity() {
             layoutManager = viewManager
             adapter = viewAdapter
         }
+
+    }
+
+    private fun setupRecyclerView(repositories: ArrayList<Repo>?) {
+//        viewManager = GridLayoutManager(this, 2)
+//        viewAdapter = GHRepositoryAdapter(repositories)
+//
+//        recyclerView = repositoryRecyclerView.apply {
+//            layoutManager = viewManager
+//            adapter = viewAdapter
+//        }
     }
 
     private fun setProfileData(userInfo: User) {
